@@ -1,5 +1,5 @@
 # Import Beautiful Soup
-# and irllib modules
+# and urllib modules
 import bs4 as bs
 import urllib.request
 
