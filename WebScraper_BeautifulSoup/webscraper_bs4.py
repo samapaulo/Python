@@ -1,12 +1,14 @@
+# Import Beautiful Soup
+# and irllib modules
 import bs4 as bs
-import requests
 import urllib.request
-import pandas as pd
 
+#assign variable to specimen url
 source =urllib.request.urlopen('https://www.washingtonpost.com/news-world-sitemap.xml').read()
+
+#read url using xml format
 soup = bs.BeautifulSoup(source, 'xml')
 
-print(soup.find_all('p'))
-
+#find the links
 for url in soup.find_all('loc'):
     print(url.text)
